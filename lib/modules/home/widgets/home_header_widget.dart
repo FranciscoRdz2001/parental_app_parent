@@ -7,26 +7,29 @@ class HomeHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text('Hola!', style: AppStyles.w500(32)),
-              const SizedBox(height: 8),
-              Text(
-                'Francisco',
-                style: AppStyles.w400(24, Colors.grey[600]),
-              ),
-            ],
+    return CustomContainerWidget(
+      padding: 16,
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text('Hola!', style: AppStyles.w500(18)),
+                const SizedBox(height: 4),
+                Text(
+                  'Francisco',
+                  style: AppStyles.w400(24, Colors.grey[600]),
+                ),
+              ],
+            ),
           ),
-        ),
-        const CustomContainerWidget(
-          child: Icon(Icons.person),
-        ),
-      ],
+          const CustomContainerWidget(
+            child: Icon(Icons.person),
+          ),
+        ],
+      ),
     );
   }
 }
